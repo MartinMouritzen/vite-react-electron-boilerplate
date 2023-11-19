@@ -1,9 +1,9 @@
-import './App.css'
+import './App.scss'
 
 const App = () => {
 	return (
-		<div className='App'>
-			test
+		<div className="app">
+			test2
 		</div>
 	);
 }
