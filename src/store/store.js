@@ -24,11 +24,9 @@ localForage.config({
 const loadState = async () => {
 	await localForage.ready();
 	try {
-		var state = await localForage.getItem(stateProperty) || {};
-		state = JSON.parse(state);
-
+		var state = await localForage.getItem(stateProperty) || false;
+		state = state ? JSON.parse(state) : {};
 		loadedState = true;
-
 		return state;
 	}
 	catch (error) {
